@@ -1,0 +1,51 @@
+# Environment variables (NEVER commit these!)
+.env
+.flaskenv
+
+# SSL Certificates (local development only)
+*.pem
+cert.pem
+key.pem
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDE folders
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Flask instance folder
+instance/
+
+# Local data files
+notes.txt
+*.db
+*.sqlite3
+
+# Build/distribution
+dist/
+build/
+*.egg-info/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs
+*.log
