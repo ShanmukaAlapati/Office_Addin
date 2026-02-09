@@ -20,12 +20,13 @@ def get_db_connection():
 
 @app.route('/')
 def taskpane():
-    return send_from_directory('.', 'taskpane.html')
+    return send_from_directory(os.path.dirname(__file__), 'taskpane.html')
 
-@app.route('/static/<path:filename>')
+# Serve JS from same folder as app.py
 @app.route('/taskpane.js')
-def static_files(filename):
-    return send_from_directory('.', 'taskpane.js')
+def serve_js():
+    return send_from_directory(os.path.dirname(__file__), 'taskpane.js')
+
 
 @app.route('/icon-16.png')
 @app.route('/icon-32.png')
@@ -89,3 +90,4 @@ def get_notes():
 if __name__ == '__main__':
     # Local development only
     app.run(host='localhost', port=3000, ssl_context=('cert.pem', 'key.pem'), debug=True)
+
