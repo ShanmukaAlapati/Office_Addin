@@ -89,4 +89,3 @@ def get_notes():
 if __name__ == '__main__':
     # Local development only
     app.run(host='localhost', port=3000, ssl_context=('cert.pem', 'key.pem'), debug=True)
-
