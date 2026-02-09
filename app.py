@@ -23,7 +23,7 @@ def taskpane():
     return send_from_directory('.', 'taskpane.html')
 
 @app.route('/taskpane.js')
-def static_files(filename):
+def static_files():
     return send_from_directory('.', 'taskpane.js')
 
 @app.route('/icon-16.png')
@@ -218,3 +218,4 @@ if __name__ == '__main__':
             ssl_context=('cert.pem', 'key.pem'), 
             debug=True
         )
+
