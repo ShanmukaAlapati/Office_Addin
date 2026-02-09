@@ -23,6 +23,7 @@ def taskpane():
     return send_from_directory('.', 'taskpane.html')
 
 @app.route('/static/<path:filename>')
+@app.route('/taskpane.js')
 def static_files(filename):
     return send_from_directory('.', 'taskpane.js')
 
@@ -88,3 +89,4 @@ def get_notes():
 if __name__ == '__main__':
     # Local development only
     app.run(host='localhost', port=3000, ssl_context=('cert.pem', 'key.pem'), debug=True)
+
