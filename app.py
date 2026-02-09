@@ -20,11 +20,11 @@ def get_db_connection():
 
 @app.route('/')
 def taskpane():
-    return render_template('taskpane.html')
+    return send_from_directory('.', 'taskpane.html')
 
 @app.route('/static/<path:filename>')
 def static_files(filename):
-    return send_from_directory('static', filename)
+    return send_from_directory('.', filename)
 
 @app.route('/icon-16.png')
 @app.route('/icon-32.png')
