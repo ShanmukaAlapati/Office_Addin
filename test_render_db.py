@@ -3,6 +3,9 @@ import os
 import sys
 from dotenv import load_dotenv
 
+
+
+
 print("🐍 Python version:", sys.version)
 print("📁 Current directory:", os.getcwd())
 print("📄 Files in directory:", os.listdir('.'))
