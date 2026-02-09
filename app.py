@@ -24,7 +24,7 @@ def taskpane():
 
 @app.route('/static/<path:filename>')
 def static_files(filename):
-    return send_from_directory('.', filename)
+    return send_from_directory('.', 'taskpane.js')
 
 @app.route('/icon-16.png')
 @app.route('/icon-32.png')
